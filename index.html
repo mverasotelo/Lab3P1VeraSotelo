@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Practica Parcial</title>
+</head>
+<body> 
+    <h1>Form Datos</h1>
+    <label for="selectFiltrado">Filtrar por:</label>
+    <select id="selectFiltrado">
+        <option value="todos" selected>Todos</option>
+        <option value="docentes">Alumnos</option>
+        <option value="alumnos">Docentes</option>
+    </select>
+    <div id="promedio">
+    <label for="inputPromedio">Valor Promedio DNI:</label>
+    <input id="inputPromedio" type="text" readonly="readonly">
+    <input type="button" id="promedioButton" value="Calcular"></input>
+    </div>
+
+    <div id="checkboxs">
+        <span><input type="checkbox" class='cbTitulo' value="colId" checked><label for="cbId">ID</label></span>
+        <span><input type="checkbox" class='cbTitulo' value="colDni" checked><label for="cbDni">DNI</label></span>
+        <span><input type="checkbox" class='cbTitulo' value="colApellido" checked><label for="cbApellido">Apellido</label></span>
+        <span><input type="checkbox" class='cbTitulo' value="colNombre" checked><label for="cbNombre">Nombre</label></span>
+        <span><input type="checkbox" class='cbTitulo' value="colNumero" checked><label for="cbNumero">Numero Curso</label></span>
+        <span><input type="checkbox" class='cbTitulo' value="colLetra"  checked><label for="cbLetra">Letra Curso</label></span>
+        <span><input type="checkbox" class='cbTitulo' value="colMateria" checked><label for="cbMateria">Materia</label></span>
+        <span><input type="checkbox" class='cbTitulo' value="colAnio" checked><label for="cbAnio">Año</label></span>
+    </div>
+
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th class="colId"><button class='botonTitulo' id='id'>ID</button></th>
+                <th class="colDni"><button class='botonTitulo' id='dni'>DNI</button></th>
+                <th class="colApellido"><button class='botonTitulo'  id='apellido'>Apellido</button></th>
+                <th class="colNombre"><button class='botonTitulo' id='nombre'>Nombre</button></th>
+                <th class="colLetra"><button class='botonTitulo' id='numeroCurso'>Numero Curso</button></th>
+                <th class="colNumero"><button class='botonTitulo'  id='letraCurso'>Letra Curso</button></th>
+                <th class="colMateria"><button class='botonTitulo' id='materia'>Materia</button></th>
+                <th class="colAnio"><button class='botonTitulo' id='año'>Año</button></th>
+            </tr>
+        </thead>
+        <tbody id="tablaBody"></tbody>
+    </table>
+    <input type="button" id="agregarButton" value="Agregar"></input>
+
+    <form id="formPersonas">
+        <select id="selectTipo">
+            <option value="nuevoCliente">Alumno</option>
+            <option value="nuevoEmpleado">Docente</option>
+        </select>
+        <label for="inputId">ID</label>
+        <input id="inputId" type="number" required readonly='readonly'>
+        <label for="inputDni">DNI</label>
+        <input id="inputDni" type="number" required>
+        <label for="inputApellido">Apellido</label>
+        <input id="inputApellido" type="text" required>
+        <label for="inputNombre">Nombre</label>
+        <input id="inputNombre" type="text" required>
+        <label id="labelNumCurso" for="inputNumCurso">Numero Curso</label>
+        <input id="inputNumCurso" type="number">
+        <label id="labelLetraCurso" for="inputLetraCurso">Letra Curso</label>
+        <input id="inputLetraCurso" type="text" >
+        <label id="labelMateria" for="inputMateria">Materia</label>
+        <input id="inputMateria" type="text">
+        <label id="labelAnio" for="inputAnio">Año</label>
+        <input id="inputAnio" type="number">
+
+        <div id="botones">
+            <input type="button" id="nuevoButton" value="Agregar"></input>
+            <input type="button" id="modificarButton" value="Modificar"></input>
+            <input type="button" id="eliminarButton" value="Eliminar"></input>
+            <input type="button" id="cancelarButton" value="Cancelar"></input>
+        </div>
+
+    </form>
+</body>
+</html>
+<script src="scripts.js" type="text/javascript"></script>
